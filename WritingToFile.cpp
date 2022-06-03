@@ -9,10 +9,11 @@ int main(){
 	ofstream filez("file.txt");
 	filez<<lolz;
 	cout<<a<<endl;
-	/*ifstream read;
+	filez.close();
+	ifstream read;
 	read.open("file.txt");
 	string reading;
-	reading=read.get();
-	cout<<reading<<endl;
-	
+	getline(read,reading);
+	cout<<reading;
+	read.close();
 }

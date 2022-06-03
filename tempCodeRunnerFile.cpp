@@ -1,16 +1,28 @@
 #include <iostream>
 using namespace std;
-class B;
-class A{
-int i;
-public: A(){i=5;}
-friend class B;
-};
-class B{
-public: void show(A a){cout<<"i="<<a.i<<endl;}
+class complex{
+    int real,img;
+    public:
+    istream &operator >>(istream &in){
+        
+        cout<<"Enter real part";
+        
+        in>>real;
+        cout<<"Enter Imaginary part: \n";
+        in>>img;
+        return in;
+    }
+    ostream &operator <<(ostream &out){
+        out<<"Complex Number is: ";
+        out<<real;
+        out<<"+";
+        out<<img<<"i"<<endl;
+        return out;
+    }
+
 };
 int main(){
-A a; 
-B b; 
-b.show(a);
+    complex c1,c2,c3;
+    c1>>cin;
+    c1<<cout;
 }
