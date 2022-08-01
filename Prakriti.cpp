@@ -1,4 +1,6 @@
+#include<iostream>
+using namespace std;
 int main(){
-    cout<<"Sowwrryyy";
-    return
+    cout<<"Sowwwwrrry";
+    return 0;
 }
